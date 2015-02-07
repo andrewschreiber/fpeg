@@ -3,7 +3,7 @@ import copy
 
 image = cv2.imread("images/friends.jpg")
 
-faceCascade = cv2.CascadeClassifier("models/haarcascade_frontalface_default.xml")
+faceCascade = cv2.CascadeClassifier("models/haarcascade_profileface.xml")
 
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 cv2.imwrite("gray.jpg", gray)
