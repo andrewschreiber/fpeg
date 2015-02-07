@@ -19,9 +19,12 @@ for (x, y, w, h) in faces:
   i += 1
   cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
   face_img = image[y:(y + h), x:(x + w)]
-  #gray = cv2.cvtColor(face_img, cv2.COLOR_BGR2GRAY)
-  #image[y:(y + h), x:(x + w)] = gray
+  gray = cv2.cvtColor(face_img, cv2.COLOR_BGR2GRAY)
+  gray_bgr = cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR)
+  image[y:(y + h), x:(x + w)] = gray_bgr
   cv2.imwrite("face" + str(i) + ".jpg", face_img)
+
+print str(len(faces)) + " faces found"
 
 cv2.imwrite("faces.jpg", image)
 
