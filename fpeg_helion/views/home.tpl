@@ -7,9 +7,10 @@
   </head>
   
   <body>
-    <form action="/compress" method="post" enctype="multipart/form-data">
-      Select a file: <input type="file" name="upload" />
-      <input type="submit" value="Show Compressed FPEG!" />
+    <form id="upload-form" enctype="multipart/form-data">
+      Select a file:
+      <input id="upload-file" type="file" name="upload"/>
+      <button id="upload-button" type="button"/>Show Compressed FPEG!</button>
     </form>
   </body>
 </html>

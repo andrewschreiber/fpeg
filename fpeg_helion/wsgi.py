@@ -2,8 +2,16 @@
 import bottle
 from bottle import route, request, post, template
 
+import logging
+
 import json
 import os
+
+logging.basicConfig()
+log = logging.getLogger("fpeg")
+log.setLevel(logging.DEBUG)
+
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'static')
 
 
 @route('/')
@@ -12,11 +20,23 @@ def home():
   return bottle.template('home', sent=False, body=None)
 
 
-@route('/compress')
+@post('/compress')
 def compress():
-  pass
+  data = request.files.get("upload")
+  if data and data.file:
+    raw = data.file.read()
+    filename = data.filename
+    log.debug("uploaded {} ({} bytes).".format(filename, len(raw)))
+  else:
+    log.error("upload failed")
+        
 
 
+@route('/static/:filename')
+def serve_static(filename):
+    log.debug("serving static assets")
+    return bottle.static_file(filename, root=STATIC_ROOT)
+    
 
 application = bottle.app()
 application.catchall = False
