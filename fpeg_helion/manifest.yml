@@ -1,10 +1,7 @@
 applications:
   .:
-   name: sender
+   name: fpeg
    mem: 128M
-   services:
-    airlift-mq:
-      type: rabbitmq3	  
    stackato:
     env:
         QUEUE_NAME: fibq

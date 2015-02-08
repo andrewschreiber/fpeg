@@ -1,0 +1,11 @@
+applications:
+  .:
+   name: fpeg
+   mem: 128M
+   stackato:
+    env:
+        QUEUE_NAME: fibq
+        ASYNC_CPU: 0
+    min_version:
+        client: 1.4.3
+  

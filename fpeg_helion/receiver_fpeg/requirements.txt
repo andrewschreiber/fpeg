@@ -1,3 +1,0 @@
-bottle
-MySQL-python
-pika
