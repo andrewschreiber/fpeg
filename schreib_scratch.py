@@ -9,7 +9,7 @@ if not os.path.exists("output"):
 
 cascade = cv2.CascadeClassifier("models/haarcascade_frontalface_default.xml")
 
-filename = "images/bbt.jpeg"
+filename = "images/lenna.png"
 filename_compressed = "output/compressed.jpg"
 
 filename_fpeg = "output/fpeg.jpg"
@@ -17,8 +17,8 @@ filename_fpeg = "output/fpeg.jpg"
 filename_equalTemp = "output/equaltemp.jpg"
 filename_equalSize= "output/equalsize.jpg" 
 
-BACKGROUND_QUALITY = 15
-FACE_QUALITY = 40
+BACKGROUND_QUALITY = 13
+FACE_QUALITY = 35
 EQUAL_QUALITY = 32
 
 
@@ -48,7 +48,7 @@ print "found {} faces!".format(faces.size/4)
 # move faces from source to compressed source
 for (x, y, w, h) in faces:
   compressed[y:(y + h), x:(x + w)] = source[y:(y + h), x:(x + w)]
-  cv2.rectangle(compressed, (x, y), (x + w, y + h), (0, 255, 0), 2)
+  #cv2.rectangle(compressed, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
 
 cv2.imwrite(filename_fpeg, compressed, [cv2.IMWRITE_JPEG_QUALITY, FACE_QUALITY])
