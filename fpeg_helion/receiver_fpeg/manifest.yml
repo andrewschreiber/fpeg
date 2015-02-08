@@ -1,0 +1,16 @@
+applications:
+  .:
+   name: receiver
+   mem: 128M
+   services:
+    ${name}-db:
+      type: mysql
+    airlift-mq:
+      type: rabbitmq3   
+   stackato:
+    env:
+        QUEUE_NAME: fibq
+    min_version:
+        client: 1.4.3
+    hooks:
+        post-staging: python create_populate_db.py

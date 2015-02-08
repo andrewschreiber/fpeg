@@ -1,0 +1,100 @@
+/* style.css */
+
+body {
+    font-family: helvetica, arial, sans-serif;
+    font-size: 11pt;
+    line-height: 120%;
+    margin: 10;
+    padding: 0;
+    background-color: #BDBDBD;
+}
+
+input {
+    font-family: helvetica, arial, sans-serif;
+}
+
+div {
+	margin: auto;
+	padding: 10;
+	
+}
+table {
+	padding: 30;
+	margin: 10;
+    border-collapse: collapse;
+}
+
+h1 {
+    margin: 10px 20px 10px 10px;
+    padding: 10px;
+    font-family: georgia, serif;
+    font-weight: normal;
+    text-align: left;
+    font-size: 45px;
+    color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.container {
+    background-color: #99CCFF;
+    text-align: left;
+    padding: 10%;
+    border-bottom: solid 4px #243040;
+    width=80%;
+    height = 50%;
+    margin = 10;
+    border: solid 1px #243040;
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px #888888;
+    
+}
+
+.sub-container {
+	background-color: #99CCFF;
+    text-align: center;
+    padding: 2%;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: solid 1px #243040;
+    border-bottom: solid 4px #243040;
+    width=80%;
+    height = 50%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 2px #888888;
+
+}
+
+.dialog-box {
+	
+	position:absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.error {
+    padding-top: 1em;
+    margin: auto;
+    text-align: center;
+    width: 20em;
+    color: #F89399;
+}
+
+.block {
+    width: auto;
+    display: inline-block;
+    margin: 1em 0.8em;
+}
+
+.ui-dialog-osx {
+	padding-top: 1em;
+    margin: auto;
+    text-align: center;
+	background-color: #99CCFF;
+    border-radius: 0 0 8px 8px; border-width: 0 8px 8px 8px;
+    box-shadow: 5px 5px 2px #888888;
+    border: solid 1px #243040;
+    border-bottom: solid 4px #243040;
+}
+
+
