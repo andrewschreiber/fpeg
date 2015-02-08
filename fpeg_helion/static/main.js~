@@ -17,7 +17,6 @@ $(document).ready(function () {
       complete: function(xhr, status) {
         console.log("request status: " + status);
       }
-      
     });
     
   });
