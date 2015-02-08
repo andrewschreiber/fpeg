@@ -26,6 +26,9 @@ def compress(filename, background_quality=10, face_quality=75, show_faces=False)
               [cv2.IMWRITE_JPEG_QUALITY, background_quality])
 
   compressed = cv2.imread(filename_compressed)
+  
+  # remove temp file after it's loaded
+  #os.remove(filename_compressed)
 
   # find faces as rects
   faces = cascade.detectMultiScale(source, scaleFactor = 1.1,
@@ -42,14 +45,10 @@ def compress(filename, background_quality=10, face_quality=75, show_faces=False)
     if show_faces:
       cv2.rectangle(compressed, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
-  
+  # save the final image
   cv2.imwrite(filename_fpeg,
               compressed,
               [cv2.IMWRITE_JPEG_QUALITY, face_quality])
-              
-  cv2.imwrite("output/source_test.jpg",
-              source,
-              [cv2.IMWRITE_JPEG_QUALITY, face_quality]) 
               
   print "INFO: result saved to: {}".format(filename_fpeg)            
               
