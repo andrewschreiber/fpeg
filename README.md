@@ -4,3 +4,7 @@ A prototype of an implementation of a content-sensitive image compression algori
 See http://imgur.com/a/YT2TX for examples with filesizes.
 
 Won 1st place at 2015 AccelerateSF Hackathon http://www.huffingtonpost.com/andre-bourque/san-franciscos-next-big-i_b_6641586.html
+
+# Other implementations
+
+PHP: https://rapidapi.com/blog/php-face-detection-fpeg/
